@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service MedicalRecordService {
+  rpc AddRecord (AddRecordRequest) returns (AddRecordResponse);
+}
+
+message AddRecordRequest {
+  string hospital_id = 1;
+  string record = 2;
+  string signature = 3;
+}
+
+message AddRecordResponse {
+  string message = 1;
+}
