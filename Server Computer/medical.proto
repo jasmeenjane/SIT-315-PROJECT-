@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "MedChain";
+
+service MedicalRecordService {
+  rpc SignRecord (MedicalRecordRequest) returns (MedicalRecordResponse);
+}
+
+message MedicalRecordRequest {
+  string hospitalId = 1;
+  string recordData = 2;
+  string signature = 3;
+}
+
+message MedicalRecordResponse {
+  string status = 1;
+}
